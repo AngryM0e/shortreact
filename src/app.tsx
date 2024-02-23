@@ -1,7 +1,3 @@
 export function App() {
-  return (
-    <div>
-      3133123
-    </div>
-  );
+  return <div>3123223133123</div>;
 }
