@@ -18,7 +18,7 @@ function buildWebpack (options) {
       clean: true, // Очищать выходной каталог перед каждой сборкой
       publicPath: '/', // Публичный путь для загрузки статических ресурсов
     },
-    plugins: pluginsWebpack(), // Плагины Webpack
+    plugins: pluginsWebpack(paths), // Плагины Webpack
     module: { rules: loadersWebpack() }, // Загрузчики модулей
     resolve: { extensions: ['.tsx', '.ts', '.js'] }, // Настройки разрешения модулей
     devtool: isDev ? 'inline-source-map' : undefined, // Source maps в режиме разработки

@@ -2,9 +2,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
-module.exports = () => {
+module.exports = (options) => {
  const htmlWebpackPlugin = new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, "..", "..",  "public", "index.html"),
+    template: options.html,
   });
 
   const copyPlugin =  new CopyPlugin({
