@@ -1,4 +1,4 @@
-export function loadersWebpack () {
+export function loadersWebpack() {
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
@@ -7,7 +7,7 @@ export function loadersWebpack () {
 
   const tsLoader = {
     test: /\.tsx?$/,
-      use: 'ts-loader',
+    use: 'ts-loader',
     exclude: /node_modules/,
   };
 
@@ -22,7 +22,7 @@ export function loadersWebpack () {
 
   const scssLoaders = {
     test: /\.s[ac]ss|css$/i,
-      use: ['style-loader', 'css-loader', 'scss-loader'],
+    use: ['style-loader', 'css-loader', 'scss-loader'],
   };
 
   return [scssLoaders, fileLoader, tsLoader, svgLoader];

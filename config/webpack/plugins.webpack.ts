@@ -1,14 +1,13 @@
-import { BuildPaths } from "./interfaces/config.interface";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import { BuildPaths } from './interfaces/config.interface';
 
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import CopyPlugin from "copy-webpack-plugin";
-
-export function pluginsWebpack (paths: BuildPaths) {
- const htmlWebpackPlugin = new HtmlWebpackPlugin({
+export function pluginsWebpack(paths: BuildPaths) {
+  const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: paths.html,
   });
 
-  const copyPlugin =  new CopyPlugin({
+  const copyPlugin = new CopyPlugin({
     patterns: [
       {
         from: 'public',
@@ -20,5 +19,5 @@ export function pluginsWebpack (paths: BuildPaths) {
     ],
   });
 
-  return [htmlWebpackPlugin, copyPlugin]
+  return [htmlWebpackPlugin, copyPlugin];
 }

@@ -7,11 +7,6 @@ export interface BuildPaths {
   src: string;
 }
 
-export interface BuildServer {
-  port: number;
-  mode: ModeOptions;
-}
-
 export interface BuildEnv {
   mode: ModeOptions;
   port: number;

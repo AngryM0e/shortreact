@@ -1,9 +1,7 @@
-console.log("START")
-
-export function App () {
+export function App() {
   return (
     <div>
       3133123
     </div>
-  )
+  );
 }

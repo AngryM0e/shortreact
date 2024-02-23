@@ -11,12 +11,12 @@ export default (env: BuildEnv) => {
 
   return buildWebpack({
     mode: MODE,
+    port: PORT,
     paths: {
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       output: path.resolve(__dirname, 'build'),
       html: path.resolve(__dirname, 'public', 'index.html'),
       src: path.resolve(__dirname, 'src'),
     },
-    port: PORT,
   });
 };

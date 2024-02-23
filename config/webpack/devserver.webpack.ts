@@ -1,9 +1,8 @@
-export function devServerWebpack(port: number){
+export function devServerWebpack(port: number) {
   return {
-    port: port,
+    port,
     open: true,
     historyApiFallback: true,
     hot: true,
   };
 }
-
