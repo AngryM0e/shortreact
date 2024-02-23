@@ -5,15 +5,10 @@ module.exports = merge(common, {
 	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
-		client: {
-			logging: 'info',
-			overlay: true,
-		},
-		contentBase: './dist',
-		historyApiFallback: true,
-		compress: true,
+		port: "3000",
 		open: true,
-		static: './build',
+		historyApiFallback: true,
+		hot: true,
 	},
 	stats: {
 		errorDetails: true,

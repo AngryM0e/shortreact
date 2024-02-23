@@ -3,13 +3,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.tsx',
+	entry:  path.resolve(__dirname, "src", "index.tsx"),
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/index.html',
+			template: path.resolve(__dirname, "public", "index.html"),
 		}),
 		new CopyPlugin({
-			patterns: [{ from: 'src/icons' }],
+			patterns: [
+				{
+					from: 'public',
+					to: '',
+					globOptions: {
+						ignore: ['**/index.html'],
+					},
+				},
+			],
 		}),
 	],
 	module: {
