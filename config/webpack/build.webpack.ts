@@ -1,10 +1,11 @@
-const path = require("path");
-const pluginsWebpack = require("./plugins.webpack");
-const loadersWebpack = require("./loaders.webpack");
-const { devServerWebpack } = require("./devserver.webpack");
+import { BuildOptions } from "./interfaces/config.interface";
+
+import { pluginsWebpack } from "./plugins.webpack";
+import { loadersWebpack } from "./loaders.webpack";
+import { devServerWebpack } from "./devserver.webpack";
 
 // Функция представляет собой конструктор конфигурации Webpack.
-function buildWebpack (options) {
+export function buildWebpack (options: BuildOptions) {
   const { mode, paths, port } = options;
 
   const isDev = mode === "development";
@@ -26,4 +27,3 @@ function buildWebpack (options) {
   }
 }
 
-module.exports = { buildWebpack }

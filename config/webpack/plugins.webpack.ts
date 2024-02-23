@@ -1,10 +1,11 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
+import { BuildPaths } from "./interfaces/config.interface";
 
-module.exports = (options) => {
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
+
+export function pluginsWebpack (paths: BuildPaths) {
  const htmlWebpackPlugin = new HtmlWebpackPlugin({
-    template: options.html,
+    template: paths.html,
   });
 
   const copyPlugin =  new CopyPlugin({

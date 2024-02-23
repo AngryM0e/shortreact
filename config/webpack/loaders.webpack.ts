@@ -1,4 +1,4 @@
-module.exports = () => {
+export function loadersWebpack () {
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,

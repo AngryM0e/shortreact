@@ -1,4 +1,4 @@
-function devServerWebpack(port){
+export function devServerWebpack(port: number){
   return {
     port: port,
     open: true,
@@ -7,4 +7,3 @@ function devServerWebpack(port){
   };
 }
 
-module.exports = { devServerWebpack }
