@@ -1,13 +1,15 @@
 const { merge } = require("webpack-merge");
 const common = require('./config/webpack/webpack.common');
 
-module.exports = () => {
+module.exports = (env) => {
+  const MODE = env.mode || 'development';
+  const PORT = env.port || 3000;
 
   return merge(common, {
-    mode: 'development',
+    mode: MODE,
     devtool: 'inline-source-map',
     devServer: {
-      port: "3000",
+      port: PORT,
       open: true,
       historyApiFallback: true,
       hot: true,
